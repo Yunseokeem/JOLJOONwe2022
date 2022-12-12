@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>JOLJOONwe 2022</title>
+
+   <link rel="shortcut icon" href="assets/favicon.ico">
+
+   <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+   <link rel="manifest" href="assets/site.webmanifest">
+   <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Poppins:wght@100;400;500;600;700&display=swap');
+
+      :root{
+         /*Color*/
+         --color-main: #050505;
+         --color-accect: #F4A52E;
+         --color-white: #FFFFFF;
+         --color-grey: #0F0F0F;
+
+         /*Text*/
+         --color-text-white: #FFFFFF;
+         --color-text-black: #050505;
+         --color-text-yellow: #F4A52E;
+
+         /*Font Size*/
+         --font-extralarge: 3rem; /*48px*/
+         --font-large: 2.5rem; /*40px*/
+         --font-medium: 1.75rem; /*28px*/
+         --font-regular: 1.5rem; /*24px*/
+         --font-small: 1.25rem; /*20px*/
+         --font-micro: 1.125rem; /*18px*/
+      }
+
+      *{
+         margin: 0;
+         padding: 0;
+         font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+         -webkit-user-select:none;
+         -moz-user-select:none;
+         -ms-user-select:none;
+         user-select:none
+      }
+
+      a{
+         text-decoration: none;
+      }
+
+      ul{
+         list-style: none;
+      }
+
+
+
+
+      /*Header*/
+
+      #header{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position: fixed;
+         z-index: 50;
+         top: 0;
+         left: 0;
+         right: 0;
+         width: 100%;
+         padding: 0 80px;
+         background: rgba(5, 5, 5, 0.8);
+         box-sizing: border-box;
+      }
+
+
+      .menu-list{
+         display: flex;
+         align-items: center;
+         font-weight: 500;
+         font-size: var(--font-small);
+      }
+
+
+      .menu-list a{
+         padding: 36px;
+      }
+
+
+      .menu-list li{
+         display: flex;
+         padding: 4px 8px;
+         border-radius: 4px;
+         color: var(--color-text-white);
+         background: rgba(5, 5, 5, 0.0);
+         transition: all .5s ease;
+      }
+
+
+      .menu-list a:hover li{
+         color: var(--color-text-black);
+         background: var(--color-white);
+      }
+
+
+      .menu-list .active{
+         position: relative;
+         color: var(--color-text-black);
+         background: var(--color-white);
+      }
+
+
+      .menu-list .number{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         top: 22%;
+         margin-left: 98px;
+         padding: 2px 4px;
+         border-radius: 4px;
+         color: var(--color-text-black);
+         font-weight: 500;
+         font-size: 1rem;
+         line-height: 1.1rem;
+         background: var(--color-accect);
+      }
+
+
+      .menu-icon a{
+         filter: invert(1);
+         transition: all .3s ease;
+      }
+
+
+      .menu-icon a div{
+         background: var(--color-white);
+      }
+
+
+      .menu-icon a:hover{
+         opacity: .5;
+      }
+
+
+      .menu-icon a div:nth-child(2){
+         width: 16px;
+      }
+
+      /*Header*/
+
+
+
+
+
+
+
+
+      /*Hero*/
+
+      #hero-wrap{
+         display: flex;
+         justify-content: center;
+         flex-flow: column;
+         position: relative;
+         width: 100%;
+         height: 60vh;
+         padding-top: 107px;
+         color: var(--color-text-white);
+         background-image: url(https://i.postimg.cc/N0p4mrF0/Painting.jpg);
+         background-position: bottom;
+         background-size: cover;
+      }
+
+
+      .hero-title-wrap{
+         display: flex;
+         flex-flow: column;
+         align-items: center;
+      }
+
+
+      .hero-title{
+         display: flex;
+         align-items: center;
+         text-align: center;
+      }
+
+
+      h1{
+         font-weight: 600;
+         font-size: 6vw;
+         transition: all .1s ease;
+      }
+
+
+      h1:hover{
+         color: var(--color-text-yellow);
+         text-shadow: 5px 5px 20px rgba(0, 0, 5, .3);
+      }
+
+
+      #hero-wrap h2{
+         font-weight: 600;
+         font-size: 3vw;
+      }
+
+
+      .scroll-wrap{
+         display: flex;
+         align-items: center;
+         position: absolute;
+         right: 80px;
+         bottom: 0;
+         margin-bottom: 60px;
+      }
+
+
+      .scroll-wrap p{
+         margin-right: 16px;
+         font-weight: 400;
+         font-size: var(--font-micro);
+      }
+
+
+      .scroll-wrap .mouse{
+         position: relative;
+         width: 44px;
+         height: 72px;
+         border: 2px solid var(--color-white);
+         border-radius: 28px;
+      }
+
+
+      .scroll-wrap .mouse .scroll-btn{
+         position: absolute;
+         width: 8px;
+         height: 8px;
+         margin-top: 12px;
+         margin-left: 18px;
+         border-radius: 50%;
+         background: var(--color-white);
+         animation-name: Scrolling;
+         animation-duration: 1.5s;
+         animation-iteration-count: infinite;
+      }
+
+
+      @keyframes Scrolling{
+         0%{
+            margin-top: 12px;
+         }
+
+         95%{
+            opacity: 10%;
+         }
+
+         100%{
+            margin-top: 36px;
+            opacity: 0;
+         }
+      }
+
+      /*Hero*/
+
+
+
+
+
+
+
+
+      /*Content B*/
+
+
+      #conB{
+         display: flex;
+         flex-flow: column;
+         gap: 24px;
+         width: 100%;
+         padding: 140px 80px 80px;
+         box-sizing: border-box;
+      }
+
+
+      #conB div{
+         display: flex;
+         gap: 16px;
+      }
+
+
+      #conB .select a{
+         color: var(--color-text-black);
+         background: var(--color-accect);
+      }
+
+
+      #conB a{
+         padding: 10px 20px;
+         border-radius: 999px;
+         color: var(--color-text-white);
+         font-weight: 600;
+         font-size: var(--font-regular);
+         background: var(--color-main);
+         transition: .3s ease;
+      }
+
+
+      #conB a:hover{
+         color: var(--color-text-yellow);
+      }
+
+
+      #conB .select a:hover{
+         color: var(--color-text-black);
+      }
+
+
+      #conB .section-1{
+         width: 60%;
+      }
+
+
+      /*Content B*/
+
+
+
+
+
+
+
+
+      /*Content C*/
+
+
+      #conC{
+         display: flex;
+         flex-flow: column;
+         gap: 60px;
+         width: 100%;
+         padding: 80px 80px 200px;
+         box-sizing: border-box;
+      }
+
+
+      #conC h2{
+         font-weight: 600;
+         font-size: var(--font-large);
+      }
+
+
+      .container{
+         display: flex;
+         gap: 4vw;
+         flex-wrap: wrap;
+         width: 100%;
+      }
+
+
+      .container .card{
+         width: 360px;
+      }
+
+
+      .card:hover h3{
+         color: var(--color-text-yellow);
+      }
+
+
+      .container .card-img{
+         display: inline-block;
+         width: 360px;
+         height: 360px;
+         overflow: hidden;
+         width: 360px;
+         height: 380px;
+      }
+
+
+      .card-img img{
+         transition: .2s ease;
+      }
+
+
+      .card:hover .card-img img{
+         transform: scale(1.05);
+      }
+
+
+      .card .info{
+         display: flex;
+         flex-flow: column;
+         gap: 8px;
+         margin-top: 8px;
+         padding: 8px;
+         color: var(--color-text-black);
+         box-sizing: border-box;
+      }
+
+
+      .card h3{
+         margin-bottom: 8px;
+         font-weight: 600;
+         font-size: var(--font-medium);
+         line-height: 130%;
+         transition: .2s ease;
+      }
+
+
+      .card p{
+         font-weight: 400;
+         font-size: var(--font-small);
+         line-height: 110%;
+         opacity: .6;
+      }
+
+
+      /*Content C*/
+
+
+
+
+
+
+
+
+   
+
+      /*Footer*/
+
+      #footer{
+         display: flex;
+         justify-content: space-between;
+         position: relative;
+         width: 100%;
+         padding: 160px 80px 160px;
+         background: var(--color-main);
+         box-sizing: border-box;
+      }
+
+
+      .item .footer-logo{
+         height: 40px;
+         -webkit-user-select:none;
+         -moz-user-select:none;
+         -ms-user-select:none;
+         user-select:none
+      }
+
+
+      .footer-container{
+         display: flex;
+         gap: 20vw;
+      }
+
+
+      #footer .site-info a{
+         color: var(--color-text-white);
+      }
+
+
+      #footer .site-info{
+         display: flex;
+         flex-flow: column;
+         font-weight: 500;
+         font-size: var(--font-micro);
+      }
+
+
+      #footer .site-info li{
+         margin-bottom: 16px;
+         opacity: .5;
+      }
+
+
+      #footer .site-info li:hover{
+         text-decoration: underline;
+         opacity: 1;
+      }
+
+
+      #footer .info-container{
+         display: flex;
+         flex-flow: column;
+         gap: 36px;
+         opacity: .5;
+      }
+
+
+      .info-container .info{
+         display: flex;
+         flex-flow: column;
+         gap: 4px;
+         color: var(--color-text-white);
+      }
+
+      .info-container .info h6{
+         font-weight: 500;
+         font-size: 1rem;
+      }
+
+      .info-container .info p{
+         font-weight: 500;
+         font-size: var(--font-micro);
+      }
+
+
+
+      .top-btn{
+         position: absolute;
+         z-index: 50;
+         top: -140px;
+         right: 80px;
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+         box-sizing: border-box;
+         box-shadow: 0px 5px 30px rgba(0, 0, 5, .2);
+         transition: .5s ease;
+      }
+
+
+      .top-btn:hover{
+         box-shadow: 0px 5px 30px rgba(0, 0, 5, .5);
+         transform: translateY(-20px);
+      }
+
+      /*Footer*/
+
+
+
+
+   </style>
+
+</head>
+
+
+<body>
+
+
+
+
+   <!-- Header -->
+
+   <div id="header">
+      
+      <a href="Index.html"><img src="https://i.postimg.cc/zBH7kw4w/logo.png" alt="logo" height="30px"></a>
+
+      <ul class="menu-list">
+
+         <a href="Index.html"><li>Home</li></a>
+         <a href="About.html"><li>About</li></a>
+         <a href="Exhibition.html"><li class="active">Exhibition</li>
+            <div class="number">78</div></a>
+         <a href="Contact.html"><li>Contact</li></a>
+
+      </ul>
+
+      <div class="menu-icon">
+
+         <a href="Menu_painting.html">
+            <img src="https://i.postimg.cc/25F47NKS/menu-FILL0-wght400-GRAD0-opsz48-1.png" width="48px">
+         </a>
+
+      </div>
+
+   </div>
+
+   <!-- Header -->
+
+
+
+
+
+
+
+
+   <!-- Hero -->
+
+   <div id="hero-wrap">
+
+      <div class="hero-title-wrap">
+
+         <div class="hero-title">
+
+            <h1>Painting</h1>
+
+         </div>
+
+         <div class="hero-subtitle">
+
+            <h2>Exhibitions</h2>
+
+         </div>
+
+      </div>
+
+
+         <div class="scroll-wrap">
+
+            <p>Scroll Down</p>
+            <div class="mouse"><div class="scroll-btn"></div></div>
+
+         </div>
+
+   </div>
+
+   <!-- Hero -->
+
+
+
+
+
+
+
+
+   <!-- Content B -->
+
+
+   <div id="conB">
+
+
+      <div class="section-1">
+
+         <a href="Exhibition.html">All</a>
+         <a href="Exhibition_Fashiondesign.html">Fashion Design</a>  
+         <a href="Exhibition_Industrialdesign.html">Industrial Design</a>
+         <a href="Exhibition_Mediaart.html">Media Art</a>
+
+      </div>
+
+
+
+
+      <div class="section-2">
+
+         <div class="select">
+            <a href="Exhibition_Painting.html">Painting</a>
+         </div>
+         <a href="Exhibition_Plasticart.html">Plastic Art</a>
+         <a href="Exhibition_Spaceart.html">Space Art</a>
+
+      </div>
+
+
+
+
+      <div class="section-3">
+
+         <a href="Exhibition_Visualdesign.html">Visual Design</a>
+
+      </div>
+
+
+   </div>
+
+
+   <!-- Content B -->
+
+
+
+
+
+
+
+
+   <!-- Content C -->
+
+
+   <div id="conC">
+
+
+      <h2>Painting</h2>
+
+      <div class="container">
+
+
+
+
+
+
+         <div class="card">
+            <a href="https://my.matterport.com/show/?m=KWM1VT4jR2i&fbclid=PAAaaytI_5WfjT2JhuWxu0lvBIGV4jpglCXfhbTJCYmogT9LG9ODkIqartvZo" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/8kry8ffq/01.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>환상교차로 展</h3>
+                  <p>추계예술대학교 미술대학 서양화과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+         <div class="card">
+            <a href="https://neolook.com/archives/20221130d" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/prLRxgtn/image.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>PLAN PLAIN PLATE</h3>
+                  <p>추계예술대학교 미술대학 판화과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+         <div class="card">
+            <a href="http://wp2022ulsan.creatorlink.net/" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/FK09xyZ1/02.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>BETA</h3>
+                  <p>울산대학교 예술대학 미술학부 서양화과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="http://www.hiopmingle.com/" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/RZTwhtr5/03.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>다른 길을 걷다가도 서로를 마주칠 때가 있습니다</h3>
+                  <p>홍익대학교 동양화과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="http://caufineartexhibition.kr/" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/kGTz9bXt/image.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>0,1</h3>
+                  <p>중앙대학교 미술학부 서양화전공</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="https://www.smfa2022.com/" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/nVsK2MmB/02.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>웅성웅성</h3>
+                  <p>숙명여자대학교 회화과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="https://sites.google.com/bau.ac.kr/2022bau/" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/SRJJSX64/image.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>봄이 실린 역으로…</h3>
+                  <p>백석예술대학교 만화애니메이션 전공</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="http://www.yck.kr/html/contents/show_view?idx=5066&fbclid=PAAaavTTuZz9MeXkfRVlhLKlbCth7ScH2WV21SJ1akRaRkhLB2hDPcbmSvE2I" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/pLNpvLpN/image.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>END AND</h3>
+                  <p>인하대학교 조형예술학과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="https://bomi2046.wixsite.com/my-site-5" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/fbf3BQzG/01.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>맙소사 OH, GOD</h3>
+                  <p>경기대학교 서양화 미술경영학과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+         <div class="card">
+            <a href="https://neolook.com/archives/20220926a" target="blank_">
+               <div class="card-img"><img src="https://i.postimg.cc/R0qb4y5X/01.jpg" width="360px"></div>
+
+               <div class="info">
+                  <h3>볼펜은냉장고</h3>
+                  <p>경성대학교 미술학과</p>
+               </div>
+            </a>
+         </div>
+
+
+
+
+      </div>
+
+
+   </div>
+
+
+   <!-- Content C -->
+
+
+
+
+
+
+
+
+   <!-- Footer -->
+
+   <div id="footer">
+
+      <div class="footer-logo">
+         <a href="Index.html"><img src="https://i.postimg.cc/3xgvjDzP/Logo-large.png" alt="logo-footer" height="40px"></a>
+      </div>
+
+
+      <div class="footer-container">
+      
+         <div class="site-info">
+               
+            <ul>
+                  
+               <a href="Index.html"><li>Home</li></a>
+               <a href="About.html"><li>About</li></a>
+               <a href="Exhibition.html"><li>Exhibition</li></a>
+               <a href="Contact.html"><li>Contact</li></a>
+
+            </ul>
+
+         </div>
+
+
+         <div class="info-container">
+
+            <div class="info">
+
+               <h6>Email</h6>
+               <p>joljoon_we@kakao.com</p>
+
+            </div>
+
+            <div class="info">
+
+               <h6>Instagram</h6>
+               <p>@joljoon_we</p>
+                     
+            </div>
+
+         </div>
+
+      </div>
+
+      <a class="top-btn" href="#hero-wrap">
+         <img src="https://i.postimg.cc/XJYf74k4/Top.png" width="80px">
+      </a>
+
+   </div>
+
+   <!-- Footer -->
+
+
+
+
+
+
+
+   <script type="text/javascript">
+      (function(w, d, a){
+      w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+      };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+      })(window, document, "//rum.beusable.net/load/b221212e122456u865");
+   </script>
+
+
+</body>
+
+</html>

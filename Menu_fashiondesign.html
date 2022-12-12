@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JOLJOONwe 2022</title>
+
+	<link rel="shortcut icon" href="assets/favicon.ico">
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="assets/site.webmanifest">
+	<link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Poppins:wght@100;400;500;600;700&display=swap');
+
+		:root{
+			/*Color*/
+			--color-main: #050505;
+			--color-accect: #F4A52E;
+			--color-white: #FFFFFF;
+
+			/*Text*/
+			--color-text-white: #FFFFFF;
+			--color-text-black: #050505;
+			--color-text-yellow: #F4A52E;
+
+			/*Font Size*/
+			--font-extralarge: 3rem; /*48px*/
+			--font-large: 2.5rem; /*40px*/
+			--font-medium: 1.75rem; /*28px*/
+			--font-regular: 1.5rem; /*24px*/
+			--font-small: 1.25rem; /*20px*/
+			--font-micro: 1.125rem; /*18px*/
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', 'Noto Sans KR', sans-serif;body
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+
+
+
+		/*Header*/
+
+		#header{
+	        display: flex;
+	        justify-content: space-between;
+         	align-items: center;
+	        position: fixed;
+	        z-index: 50;
+	        top: 0;
+	        left: 0;
+	        right: 0;
+	        width: 100%;
+	        padding: 0 80px;
+        	background: rgba(5, 5, 5, 0.8);
+	        box-sizing: border-box;
+		}
+
+
+		.menu-list{
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			font-size: var(--font-small);
+			opacity: 0;
+		}
+
+
+		.menu-list li{
+			padding: 40px 44px;
+			border-radius: 4px;
+			color: var(--color-text-white);
+			background: rgba(5, 5, 5, 0.0);
+			transition: all .5s ease;
+		}
+
+
+		.menu-list a:hover li{
+			color: var(--color-text-black);
+			background: var(--color-white);
+		}
+
+
+		.menu-list .active{
+			color: var(--color-text-black);
+			background: var(--color-white);
+		}
+
+
+		.cancel-icon a{
+			display: flex;
+			flex-flow: column;
+			align-items: flex-end;
+			gap: 10px;
+			padding: 12px 14px;
+			transition: all .3s ease;
+			filter: invert(1.0) brightness(1.0);
+		}
+
+
+		.cancel-icon a div{
+			display: inline-block;
+			width: 24px;
+			height: 2px;
+			background: var(--color-white);
+		}
+
+
+		.cancel-icon a div:nth-child(2){
+			width: 16px;
+		}
+
+
+		.cancel-icon a:hover{
+			opacity: .5;
+		}
+
+		/*Header*/
+
+
+
+
+
+
+
+
+		/*Content*/
+
+
+		#content{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+			padding: 107px 80px 0;
+			background: var(--color-main);
+			box-sizing: border-box;
+		}
+
+
+		#content ul{
+			width: 100%;
+		}
+
+
+		#content li{
+			padding: 48px 0;
+			border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+			font-size: 3.5rem;
+			text-align: center;
+		}
+
+
+		#content .select li{
+			color: var(--color-text-white);
+		}
+
+
+		#content .unselect li{
+			color: rgba(255, 255, 255, 0.3);
+			transition: all .5s ease;
+		}
+
+
+		#content .unselect li:hover{
+			color: var(--color-text-white);
+		}
+
+
+		#content .select{
+			position: relative;
+		}
+
+		#content .unselect{
+			position: relative;
+		}
+
+
+		.unselect .underline{
+			opacity: 0;
+		}
+
+
+		.unselect a:hover ~ .underline{
+			opacity: 1;
+		}
+
+
+		.underline{
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+			transition: all .5s ease;
+		}
+
+
+		/*Content*/
+
+
+	</style>
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+	<!-- Header -->
+
+	<div id="header">
+		
+		<a href="Index.html"><img src="https://i.postimg.cc/zBH7kw4w/logo.png" alt="logo" height="30px"></a>
+
+		<ul class="menu-list">
+
+			<li>Home</li>
+			<li>About</li>
+			<li class="active">Exhibition</li>
+			<li>Contact</li>
+
+		</ul>
+
+		<div class="cancel-icon">
+
+			<a href="Exhibition_Fashiondesign.html">
+				<img src="https://i.postimg.cc/Hkb9j8sv/close-FILL0-wght400-GRAD0-opsz48.png" width="48px">
+			</a>
+
+		</div>
+
+	</div>
+
+	<!-- Header -->
+
+
+
+
+
+
+
+
+	<!-- Content -->
+
+
+	<div id="content">
+
+		<ul>
+			
+			<div class="unselect">
+				<a href="Index.html"><li>Home</li></a>
+				<div class="underline"></div>
+			</div>
+
+			<div class="unselect">
+				<a href="About.html"><li>About</li></a>
+				<div class="underline"></div>
+			</div>
+
+			<div class="select">
+				<a href="Exhibition.html"><li>Exhibition</li></a>
+				<div class="underline"></div>
+			</div>
+
+			<div class="unselect">
+				<a href="Contact.html"><li>Contact</li></a>
+				<div class="underline"></div>
+			</div>
+		</ul>
+
+	</div>
+
+
+	<!-- Content -->
+
+
+
+
+
+
+
+    <script type="text/javascript">
+      (function(w, d, a){
+      w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+      };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+      })(window, document, "//rum.beusable.net/load/b221212e122456u865");
+    </script>
+
+
+</body>
+
+
+
+
+</html>

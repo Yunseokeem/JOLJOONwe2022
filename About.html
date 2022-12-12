@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>JOLJOONwe 2022</title>
+
+   <link rel="shortcut icon" href="assets/favicon.ico">
+
+   <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+   <link rel="manifest" href="assets/site.webmanifest">
+   <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Poppins:wght@100;400;500;600;700&display=swap');
+
+      :root{
+         /*Color*/
+         --color-main: #050505;
+         --color-accect: #F4A52E;
+         --color-white: #FFFFFF;
+         --color-grey: #0F0F0F;
+
+         /*Text*/
+         --color-text-white: #FFFFFF;
+         --color-text-black: #050505;
+         --color-text-yellow: #F4A52E;
+
+         /*Font Size*/
+         --font-extralarge: 3rem; /*48px*/
+         --font-large: 2.5rem; /*40px*/
+         --font-medium: 1.75rem; /*28px*/
+         --font-regular: 1.5rem; /*24px*/
+         --font-small: 1.25rem; /*20px*/
+         --font-micro: 1.125rem; /*18px*/
+      }
+
+      *{
+         margin: 0;
+         padding: 0;
+         font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+         -webkit-user-select:none;
+         -moz-user-select:none;
+         -ms-user-select:none;
+         user-select:none
+      }
+
+      a{
+         text-decoration: none;
+      }
+
+      ul{
+         list-style: none;
+      }
+
+
+
+
+      /*Header*/
+
+      #header{
+           display: flex;
+           justify-content: space-between;
+            align-items: center;
+           position: fixed;
+           z-index: 50;
+           top: 0;
+           left: 0;
+           right: 0;
+           width: 100%;
+           padding: 0 80px;
+         background: rgba(5, 5, 5, 0.8);
+           box-sizing: border-box;
+      }
+
+
+      .menu-list{
+         display: flex;
+         align-items: center;
+         font-weight: 500;
+         font-size: var(--font-small);
+      }
+
+
+      .menu-list a{
+         padding: 36px;
+      }
+
+
+      .menu-list li{
+         display: flex;
+         padding: 4px 8px;
+         border-radius: 4px;
+         color: var(--color-text-white);
+         font-size: var(--font-small);
+         background: rgba(5, 5, 5, 0.0);
+         transition: all .5s ease;
+      }
+
+
+      .menu-list a:hover li{
+         color: var(--color-text-black);
+         background: var(--color-white);
+      }
+
+
+      .menu-list .active{
+         color: var(--color-text-black);
+         background: var(--color-white);
+      }
+
+
+      .menu-icon a{
+         filter: invert(1);
+         transition: all .3s ease;
+      }
+
+
+      .menu-icon a div{
+         background: var(--color-white);
+      }
+
+
+      .menu-icon a:hover{
+         opacity: .5;
+      }
+
+      /*Header*/
+
+
+
+
+
+
+
+
+      /*Hero*/
+
+      #hero-wrap{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-flow: column;
+         position: relative;
+         width: 100%;
+         height: 90vh;
+         padding-top: 107px;
+         color: var(--color-text-black);
+         background: var(--color-main);
+      }
+
+
+      .hero-title{
+         display: flex;
+         overflow: hidden;
+         align-items: center;
+         gap: 16px;
+         padding: 4px 8px;
+         background: var(--color-white);
+      }
+
+
+      .gradient{
+         display: inline-block;
+         overflow: hidden;
+         position: absolute;
+         width: 50%;
+         height: 30%;
+         background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(5,5,5,.6) 40%, rgba(5,5,5,.8) 50%, rgba(5,5,5,.6) 60%, rgba(255,255,255,0) 100%);
+         animation-name: Gradient;
+         animation-duration: 3s;
+         animation-iteration-count: infinite;
+      }
+
+
+      @keyframes Gradient{
+         0%{
+            margin-left: -50%;
+         }
+         60%{
+            opacity: 1;
+         }
+         70%{
+            opacity: .3;
+         }
+         100%{
+            width: 20%;
+            margin-left: 48%;
+            opacity: 0;
+         }
+      }
+
+
+      #hero-wrap h1{
+         font-weight: 600;
+         font-size: 3vw;
+      }
+
+
+      .scroll-wrap{
+         display: flex;
+         align-items: center;
+         position: absolute;
+         right: 80px;
+         bottom: 0;
+         margin-bottom: 60px;
+      }
+
+
+      .scroll-wrap p{
+         margin-right: 16px;
+         color: var(--color-text-white);
+         font-weight: 100;
+         font-size: var(--font-micro);
+      }
+
+
+      .scroll-wrap .mouse{
+         position: relative;
+         width: 44px;
+         height: 72px;
+         border: 2px solid var(--color-white);
+          border-radius: 28px;
+      }
+
+
+      .scroll-wrap .mouse .scroll-btn{
+         position: absolute;
+         width: 8px;
+         height: 8px;
+         margin-top: 12px;
+         margin-left: 18px;
+         border-radius: 50%;
+         background: var(--color-white);
+         animation-name: Scrolling;
+         animation-duration: 1.5s;
+         animation-iteration-count: infinite;
+      }
+
+
+      @keyframes Scrolling{
+         0%{
+            margin-top: 12px;
+         }
+
+         95%{
+            opacity: 10%;
+         }
+
+         100%{
+            margin-top: 36px;
+            opacity: 0;
+         }
+      }
+
+      /*Hero*/
+
+
+
+
+
+
+
+
+      /*Content A*/
+
+      #conA{
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+         flex-flow: column;
+         width: 100%;
+         padding: 0 80px;
+         background: var(--color-main);
+         box-sizing: border-box;
+      }
+
+
+      .description-box{
+         display: inline-block;
+         margin-top: 20px;
+         color: var(--color-text-white);
+         font-weight: 400;
+         font-size: var(--font-micro);
+         line-height: 200%;
+      }
+
+
+      #conA .description-box{
+         width: 740px;
+         text-align: center;
+      }
+
+
+      .content-img{
+         min-width: 500px;
+         margin-top: 60px;
+      }
+
+      /*Content A*/
+
+
+
+
+
+
+
+
+      /*Content B*/
+
+      #conB{
+         display: flex;
+         flex-flow: column;
+         gap: 300px;
+         width: 100%;
+         padding: 300px 12vw 0;
+         background: var(--color-main);
+         box-sizing: border-box;
+      }
+
+      .content-box:nth-child(1) .content-img{
+         width: 50%;
+         min-width: 360px;
+      }
+
+
+      .content-box:nth-child(2) .content-img{
+         width: 70%;
+         min-width: 500px;
+      }
+
+      .content-box:nth-child(2){
+         display: flex;
+         gap: 40px;
+      }
+
+
+      #conB .description-box{
+         margin-top: 80px;
+      }
+
+
+      #conB .description-box:nth-child(1){
+         width: 740px;
+         min-width: 300px;
+         text-align: left;
+      }
+
+
+      #conB .description-box:nth-child(2){
+         width: 50%;
+         min-width: 320px;
+      }
+
+      /*Content B*/
+
+
+
+
+
+
+
+
+      /*Content C*/
+
+      #conC{
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         flex-flow: column;
+         gap: 100px;
+         width: 100%;
+         background: var(--color-main);
+         box-sizing: border-box;
+      }
+
+      #conC .info-box{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 50vw;
+         min-width: 700px;
+         padding: 5vh 2vw 5vh 4vw;
+         margin-top: 400px;
+         border: 1px solid rgba(255,255,255,0.5);
+         border-radius: 24px;
+         background: linear-gradient(0deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.3) 100%);
+      }
+
+
+      #conC .back-circle{
+         display: inline-block;
+         width: 100%;
+         height: 780px;
+         background-image: url(https://i.postimg.cc/R0n1KXK4/back-circle.jpg);
+         background-size: cover;
+         background-position: center top;
+      }
+
+
+      .info-box .item:first-child{
+         margin-right: 2vw;
+         width: 25%;
+      }
+
+
+      .info-box .item:nth-child(2){
+         width: 25%;
+      }
+
+
+      .info-box .item:nth-child(3){
+         width: 25%;
+      }
+
+
+      .info-box .item:nth-child(4){
+         width: 25%;
+      }
+
+
+      .info-box .item{
+         display: flex;
+         flex-flow: column;
+         align-items: center;
+         gap: 16px;
+         color: var(--color-text-white);
+         text-align: center;
+      }
+
+
+      .info-box .item:not(:first-child){
+         width: 100%;      
+      }
+
+
+      .info-box .item:nth-child(2){
+         border-left: 3px solid rgba(0, 0, 0, 0.2);
+         border-right: 3px solid rgba(0, 0, 0, 0.2);   
+      }
+
+
+      .info-box .item:nth-child(3){
+         border-right: 3px solid rgba(0, 0, 0, 0.2);   
+      }
+
+
+      .item h2{
+         display: inline-block;
+         width: 12vw;
+         font-weight: 400;
+         font-size: var(--font-regular);
+         line-height: 150%;
+      }
+
+
+      .item p{
+         font-weight: 600;
+         font-size: var(--font-extralarge);
+         font-family: 'Poppins', sans-serif;
+      }
+
+
+      /*Content C*/
+
+
+
+
+
+
+
+
+      /*Footer*/
+
+      #footer{
+         display: flex;
+         justify-content: space-between;
+         position: relative;
+         width: 100%;
+         padding: 160px 80px 160px;
+         background: var(--color-main);
+         box-sizing: border-box;
+      }
+
+
+      .item .footer-logo{
+         height: 40px;
+         -webkit-user-select:none;
+         -moz-user-select:none;
+         -ms-user-select:none;
+         user-select:none
+      }
+
+
+      .footer-container{
+         display: flex;
+         gap: 20vw;
+      }
+
+
+      #footer .site-info a{
+         color: var(--color-text-white);
+      }
+
+
+      #footer .site-info{
+         display: flex;
+         flex-flow: column;
+         font-weight: 500;
+         font-size: var(--font-micro);
+      }
+
+
+      #footer .site-info li{
+         margin-bottom: 16px;
+         opacity: .5;
+      }
+
+
+      #footer .site-info li:hover{
+         text-decoration: underline;
+         opacity: 1;
+      }
+
+
+      #footer .info-container{
+         display: flex;
+         flex-flow: column;
+         gap: 36px;
+         opacity: .5;
+      }
+
+
+      .info-container .info{
+         display: flex;
+         flex-flow: column;
+         gap: 4px;
+         color: var(--color-text-white);
+      }
+
+      .info-container .info h6{
+         font-weight: 500;
+         font-size: 1rem;
+      }
+
+      .info-container .info p{
+         font-weight: 500;
+         font-size: var(--font-micro);
+      }
+
+
+      .top-btn{
+         position: absolute;
+         z-index: 50;
+         top: -20px;
+         right: 80px;
+         box-sizing: border-box;
+         transition: .5s ease;
+      }
+
+
+      .top-btn:hover{
+         transform: translateY(-20px);
+         filter: brightness(.6);
+      }
+
+
+      /*Footer*/
+
+
+
+
+   </style>
+
+</head>
+
+
+<body>
+
+
+
+
+   <!-- Header -->
+
+   <div id="header">
+      
+      <a href="Index.html"><img src="https://i.postimg.cc/zBH7kw4w/logo.png" alt="logo" height="30px"></a>
+
+      <ul class="menu-list">
+
+         <a href="Index.html"><li>Home</li></a>
+         <a href="About.html"><li class="active">About</li></a>
+         <a href="Exhibition.html"><li>Exhibition</li></a>
+         <a href="Contact.html"><li>Contact</li></a>
+
+      </ul>
+
+      <div class="menu-icon">
+
+         <a href="Menu_about.html">
+            <img src="https://i.postimg.cc/25F47NKS/menu-FILL0-wght400-GRAD0-opsz48-1.png" width="48px">
+         </a>
+
+      </div>
+
+   </div>
+
+   <!-- Header -->
+
+
+
+
+
+
+
+
+   <!-- Hero -->
+
+   <div id="hero-wrap">
+
+         <div class="hero-title">
+
+            <h1>#Korea</h1>
+            <h1>#Graduation</h1>
+            <h1>#Exhibition</h1>
+
+            <div class="gradient"></div>
+
+         </div>
+
+
+         <div class="scroll-wrap">
+
+            <p>Scroll Down</p>
+            <div class="mouse"><div class="scroll-btn"></div></div>
+
+         </div>
+
+   </div>
+
+    <!-- Hero -->
+
+
+
+
+
+
+
+
+
+   <!-- Content A -->
+
+      <div id="conA">
+         
+         <div class="description-box">전국 대학의 졸업 전시를 모아놓은 사이트입니다. 사회에 진출하기 전, 그동안의 배움의 과정이 담긴 대학생들의 노력이 담긴 작품전을 볼 수 있습니다. 시각 디자인, 순수 미술, 조형 예술, 미디어 아트 등 다양한 분야의 전시가 준비되어 있습니다. 전시에 관한 정보를 얻고 관람을 즐겨보세요.</div>
+
+         <div class="content-img"><img src="https://i.postimg.cc/MTdx2Sr6/exhibition.jpg" width="100%"></div>
+
+      </div>
+
+   <!-- Content A -->
+
+
+
+
+
+
+
+
+   <!-- Content B -->
+
+      <div id="conB">
+
+         <div class="content-box">
+         
+            <div class="description-box">JOLJOON we 졸업 작품전은 Fashion Design, Industrial Design, Media Art, Painting, Plastic Art, Space Art, Visual Design의 총 7가지의 분야로 이루어져 있으며, 각 분야 안에서도 다양한 분야의 졸업 작품전을 볼 수 있습니다.</div>
+
+            <div class="content-img"><img src="https://i.postimg.cc/c4pCHnft/universus.jpg" width="100%"></div>
+
+         </div>
+
+
+         <div class="content-box">
+
+            <div class="description-box">졸업 전시에는 향후 문화예술 분야의 일원이 될 대학생들의 작품들이 담겨 있습니다. 이러한 창의력과 독창성, 그리고 고유의 개성이 담긴 작품들을 통해 진로를 고민하는 이들의 꿈에 작은 도움을 주고자 합니다.<br><br>대학 생활의 마지막 과제이자 사회로 나가기 전, 그들의 마지막 발자취가 담긴 작품전을 관람해 보세요.</div>
+
+            <div class="content-img"><img src="https://i.postimg.cc/L5RvbCJp/student.jpg" width="100%"></div>
+
+         </div>
+
+      </div>
+
+   <!-- Content B -->
+
+
+
+
+
+
+
+
+   <!-- Content C -->
+
+
+   <div id="conC">
+
+      <div class="info-box">
+
+
+         <div class="item">
+            <img class="logo-img" src="https://i.postimg.cc/qMjXcf3s/Logo-Extralarge.png" height="60px">
+         </div>
+
+         <div class="item">
+            <h2><b>JOLJOON we</b><br>작품전 수</h2>
+            <p>78+</p>
+         </div>
+
+         <div class="item">
+            <h2><b>JOLJOON we</b><br>대학교 수</h2>
+            <p>49+</p>
+         </div>
+
+         <div class="item">
+            <h2><b>JOLJOON we</b><br>학과 분야</h2>
+            <p>7</p>
+         </div>
+
+      </div>
+
+
+      <div class="back-circle"></div>
+
+   </div>
+
+   <!-- Content C -->
+
+
+
+
+
+
+
+
+   <!-- Footer -->
+
+   <div id="footer">
+
+      <div class="footer-logo">
+         <a href="Index.html"><img src="https://i.postimg.cc/3xgvjDzP/Logo-large.png" alt="logo-footer" height="40px"></a>
+      </div>
+
+
+      <div class="footer-container">
+      
+         <div class="site-info">
+               
+            <ul>
+                  
+               <a href="Index.html"><li>Home</li></a>
+               <a href="About.html"><li>About</li></a>
+               <a href="Exhibition.html"><li>Exhibition</li></a>
+               <a href="Contact.html"><li>Contact</li></a>
+
+            </ul>
+
+         </div>
+
+
+         <div class="info-container">
+
+            <div class="info">
+
+               <h6>Email</h6>
+               <p>joljoon_we@kakao.com</p>
+
+            </div>
+
+            <div class="info">
+
+               <h6>Instagram</h6>
+               <p>@joljoon_we</p>
+                     
+            </div>
+
+         </div>
+
+      </div>
+
+      <a class="top-btn" href="#hero-wrap">
+         <img src="https://i.postimg.cc/XJYf74k4/Top.png" width="80px">
+      </a>
+
+   
+   </div>
+
+   <!-- Footer -->
+
+
+
+
+
+
+
+   <script type="text/javascript">
+      (function(w, d, a){
+      w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+      };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+      })(window, document, "//rum.beusable.net/load/b221212e122456u865");
+   </script>
+
+
+</body>
+
+</html>

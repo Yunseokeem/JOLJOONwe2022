@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JOLJOONwe 2022</title>
+
+	<link rel="shortcut icon" href="assets/favicon.ico">
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="assets/site.webmanifest">
+	<link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Poppins:wght@100;400;500;600;700&display=swap');
+
+		:root{
+			/*Color*/
+			--color-main: #050505;
+			--color-accect: #F4A52E;
+			--color-white: #FFFFFF;
+			--color-grey: #0F0F0F;
+
+			/*Text*/
+			--color-text-white: #FFFFFF;
+			--color-text-black: #050505;
+			--color-text-yellow: #F4A52E;
+
+			/*Font Size*/
+			--font-extralarge: 3rem; /*48px*/
+			--font-large: 2.5rem; /*40px*/
+			--font-medium: 1.75rem; /*28px*/
+			--font-regular: 1.5rem; /*24px*/
+			--font-small: 1.25rem; /*20px*/
+			--font-micro: 1.125rem; /*18px*/
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		h1{
+				color: var(--color-text-white);
+				font-weight: 500;
+				text-decoration: underline;
+				font-size: var(--font-extralarge);
+		}
+
+
+
+
+		/*Header*/
+
+		#header{
+	        display: flex;
+	        justify-content: space-between;
+         	align-items: center;
+	        position: fixed;
+	        z-index: 50;
+	        top: 0;
+	        left: 0;
+	        right: 0;
+	        width: 100%;
+	        padding: 0 80px;
+        	background: rgba(5, 5, 5, 0.8);
+	        box-sizing: border-box;
+		}
+
+
+		.menu-list{
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			font-size: var(--font-small);
+		}
+
+
+		.menu-list a{
+			padding: 36px;
+		}
+
+
+		.menu-list li{
+			display: flex;
+			padding: 4px 8px;
+			border-radius: 4px;
+			color: var(--color-text-white);
+			font-size: var(--font-small);
+			background: rgba(5, 5, 5, 0.0);
+			transition: all .5s ease;
+		}
+
+
+		.menu-list a:hover li{
+			color: var(--color-text-black);
+			background: var(--color-white);
+		}
+
+
+		.menu-list .active{
+			color: var(--color-text-black);
+			background: var(--color-white);
+		}
+
+
+		.menu-icon a{
+			filter: invert(1);
+			transition: all .3s ease;
+		}
+
+
+		.menu-icon a div{
+			background: var(--color-white);
+		}
+
+
+		.menu-icon a:hover{
+			opacity: .5;
+		}
+
+		/*Header*/
+
+
+
+
+
+
+
+
+   /*Content A*/
+
+			#conA{
+				padding-top: 107px;
+				color: var(--color-text-white);
+				background-color: var(--color-main);
+			}
+
+
+			#conA .title-section{
+				width: 100%;
+				padding: 256px 80px 20px;
+				box-sizing: border-box;
+				-webkit-user-select:none;
+				-moz-user-select:none;
+				-ms-user-select:none;
+				user-select:none
+			}
+
+
+			#conA .details-section{
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+
+			.details-section .info{
+				width: 50%;
+				padding: 120px 80px;
+				box-sizing: border-box;
+				transition: all .5s ease;
+			}
+
+
+			.details-section .info h2{
+				margin-bottom: 12px;
+				font-weight: 500;
+				font-size: var(--font-regular);
+				-webkit-user-select:none;
+				-moz-user-select:none;
+				-ms-user-select:none;
+				user-select:none
+			}
+
+
+			.details-section .info p{
+				font-weight: 500;
+				font-size: var(--font-large);
+			}
+
+
+			.details-section .info:last-child{
+				background-color: var(--color-accect);
+				color: var(--color-text-black);
+			}
+
+
+			.details-section .info:hover{
+				background-color: var(--color-accect);
+				color: var(--color-text-black);
+			}
+
+
+			.details-section .info:hover ~ .info:last-child{
+				background-color: var(--color-main);
+				color: var(--color-text-white);
+			}
+
+		/*Content A*/
+
+
+
+
+
+
+
+
+		/*Content B*/
+
+			#conB{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: column;
+				height: 100vh;
+				background-color: var(--color-main);
+				-webkit-user-select:none;
+				-moz-user-select:none;
+				-ms-user-select:none;
+				user-select:none
+			}
+
+
+			#conB h1{
+				margin-bottom: 100px;
+			}
+
+
+			#conB .step-list{
+				display: flex;
+				flex-flow: column;
+				align-items: flex-start;
+				gap: 40px;
+			}
+
+
+			.step-list .step{
+				display: flex;
+				gap: 20px;
+				font-size: var(--font-micro);
+			}
+
+
+			.step-btn{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 44px;
+				padding: 0 16px;
+				font-weight: 600;
+				border-radius: 100px;
+				color: var(--color-text-black);
+				background-color: var(--color-accect);
+				transition: all .5s ease;
+			}
+
+
+			.description-box{
+				padding: 16px 32px;
+				border-radius: 12px;
+				font-weight: 500;
+				line-height: 150%;
+				background-color: var(--color-white);
+			}
+
+
+			.step:hover .step-btn{
+				transform: translateY(15px);
+			}
+
+
+			.step:nth-child(1) .description-box{
+				width: 800px;
+			}
+
+
+
+			.step:nth-child(2) .description-box{
+				width: 704px;
+			}
+
+
+			.step:nth-child(3) .description-box{
+				width: 800px;
+			}
+
+
+			.step:nth-child(4) .description-box{
+				width: 704px;
+			}
+
+		/*Content B*/
+
+
+
+
+
+
+
+
+		/*Footer*/
+
+		#footer{
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			width: 100%;
+			padding: 160px 80px 160px;
+			background: var(--color-grey);
+			box-sizing: border-box;
+		}
+
+
+		.item .footer-logo{
+			height: 40px;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none
+		}
+
+
+		.footer-container{
+			display: flex;
+			gap: 20vw;
+		}
+
+
+		#footer .site-info a{
+			color: var(--color-text-white);
+		}
+
+
+		#footer .site-info{
+			display: flex;
+			flex-flow: column;
+			font-weight: 500;
+			font-size: var(--font-micro);
+		}
+
+
+		#footer .site-info li{
+			margin-bottom: 16px;
+			opacity: .5;
+		}
+
+
+		#footer .site-info li:hover{
+			text-decoration: underline;
+			opacity: 1;
+		}
+
+
+		#footer .info-container{
+			display: flex;
+			flex-flow: column;
+			gap: 36px;
+			opacity: .5;
+		}
+
+
+		.info-container .info{
+			display: flex;
+			flex-flow: column;
+			gap: 4px;
+			color: var(--color-text-white);
+		}
+
+		.info-container .info h6{
+			font-weight: 500;
+			font-size: 1rem;
+		}
+
+		.info-container .info p{
+			font-weight: 500;
+			font-size: var(--font-micro);
+		}
+
+
+      .top-btn{
+         position: absolute;
+         z-index: 50;
+         top: -20px;
+         right: 80px;
+         box-sizing: border-box;
+         transition: .5s ease;
+      }
+
+
+      .top-btn:hover{
+         transform: translateY(-20px);
+         filter: brightness(.6);
+      }
+
+
+      /*Footer*/
+
+
+
+
+	</style>
+
+</head>
+
+
+<body>
+
+
+
+
+   <!-- Header -->
+
+   <div id="header">
+      
+      <a href="Index.html"><img src="https://i.postimg.cc/zBH7kw4w/logo.png" alt="logo" height="30px"></a>
+
+      <ul class="menu-list">
+
+         <a href="Index.html"><li>Home</li></a>
+         <a href="About.html"><li>About</li></a>
+         <a href="Exhibition.html"><li>Exhibition</li></a>
+         <a href="Contact.html"><li class="active">Contact</li></a>
+
+      </ul>
+
+		<div class="menu-icon">
+
+			<a href="Menu_contact.html">
+				<img src="https://i.postimg.cc/25F47NKS/menu-FILL0-wght400-GRAD0-opsz48-1.png" width="48px">
+			</a>
+
+		</div>
+
+   </div>
+
+   <!-- Header -->
+
+
+
+
+
+
+
+
+   <!-- Content A -->
+
+	<div id="conA">
+	
+		<div class="title-section">
+
+			<h1>Get in Touch</h1>
+
+		</div>
+
+
+		<div class="details-section">
+
+			<div class="info">
+				
+				<h2>Email</h2>
+				<p>joljoon_we@kakao.com</p>
+
+			</div>
+
+			<div class="info">
+				
+				<h2>Instagram</h2>
+				<p>@joljoon_we</p>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<!-- Content A -->
+
+
+
+
+	<!-- Content B -->
+
+		<div id="conB">
+
+			<h1>어떻게 이용하나요?</h1>
+
+			<div class="step-list">
+
+				<div class="step">
+
+					<div class="step-btn">Step 1</div>
+
+					<div class="description-box">
+						졸업전시 포스터와 전시 정보(제목, 날짜, 장소, 설명, 대표 페이지 링크 등), 해시태그 등을 압축하여 졸준위 이메일 joljoon_we@kakao.com 에 보냅니다.
+					</div>
+
+				</div>
+
+				<div class="step">
+
+					<div class="step-btn">Step 2</div>
+
+					<div class="description-box">
+						인스타그램 joljoon_we 계정에 DM으로 메일 발송 사실을 알립니다. 메일 확인 후 2-3일 이내에 게시됩니다.
+					</div>
+
+				</div>
+
+				<div class="step">
+
+					<div class="step-btn">Step 3</div>
+
+					<div class="description-box">
+						포스터는 jpg, png 형식을, 모션포스터는 mp4 형식을 권장합니다. 포스터 목업본(배경색 있는 경우)은 그대로 게시하며 포스터 원본은 흰 바탕에 음영을 넣어 게시합니다. 포스터를 여러 장 보내실 경우 게시 순서를 따로 기재해 주세요.
+					</div>
+
+				</div>
+
+				<div class="step">
+
+					<div class="step-btn">Step 4</div>
+
+					<div class="description-box">
+						홍보 영상의 경우 총 길이가 1분을 넘을 시에 한 클립이 1분을 넘지 않게 컷편집 후 게시 순서를 기재해 보내주시면 됩니다.
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	<!-- Content B -->
+
+
+
+
+
+
+
+
+	<!-- Footer -->
+
+	<div id="footer">
+
+		<div class="footer-logo">
+			<a href="Index.html"><img src="https://i.postimg.cc/3xgvjDzP/Logo-large.png" alt="logo-footer" height="40px"></a>
+		</div>
+
+
+		<div class="footer-container">
+		
+			<div class="site-info">
+					
+				<ul>
+						
+					<a href="Index.html"><li>Home</li></a>
+					<a href="About.html"><li>About</li></a>
+					<a href="Exhibition.html"><li>Exhibition</li></a>
+					<a href="Contact.html"><li>Contact</li></a>
+
+				</ul>
+
+			</div>
+
+
+			<div class="info-container">
+
+				<div class="info">
+
+					<h6>Email</h6>
+					<p>joljoon_we@kakao.com</p>
+
+				</div>
+
+				<div class="info">
+
+					<h6>Instagram</h6>
+					<p>@joljoon_we</p>
+							
+				</div>
+
+			</div>
+
+		</div>
+
+      <a class="top-btn" href="#conA">
+         <img src="https://i.postimg.cc/XJYf74k4/Top.png" width="80px">
+      </a>
+
+   
+  </div>
+
+   <!-- Footer -->
+
+
+
+
+
+
+
+   <script type="text/javascript">
+      (function(w, d, a){
+      w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+      };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+      })(window, document, "//rum.beusable.net/load/b221212e122456u865");
+   </script>
+
+
+</body>
+
+</html>

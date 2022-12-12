@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JOLJOONwe 2022</title>
+
+	<link rel="shortcut icon" href="assets/favicon.ico">
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="assets/site.webmanifest">
+	<link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Poppins:wght@100;400;500;600;700&display=swap');
+
+		:root{
+			/*Color*/
+			--color-main: #050505;
+			--color-accect: #F4A52E;
+			--color-white: #FFFFFF;
+			--color-grey: #0F0F0F;
+
+			/*Text*/
+			--color-text-white: #FFFFFF;
+			--color-text-black: #050505;
+			--color-text-yellow: #F4A52E;
+
+			/*Font Size*/
+			--font-extralarge: 3rem; /*48px*/
+			--font-large: 2.5rem; /*40px*/
+			--font-medium: 1.75rem; /*28px*/
+			--font-regular: 1.5rem; /*24px*/
+			--font-small: 1.25rem; /*20px*/
+			--font-micro: 1.125rem; /*18px*/
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', 'Noto Sans KR', sans-serif;body
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+
+
+
+		/*Header*/
+
+		#header{
+	        display: flex;
+	        justify-content: space-between;
+         	align-items: center;
+	        position: fixed;
+	        z-index: 50;
+	        top: 0;
+	        left: 0;
+	        right: 0;
+	        width: 100%;
+	        padding: 0 80px;
+        	background: rgba(5, 5, 5, 0.8);
+	        box-sizing: border-box;
+		}
+
+
+		.menu-list{
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			font-size: var(--font-small);
+		}
+
+
+		.menu-list a{
+			padding: 36px;
+		}
+
+
+		.menu-list li{
+			display: flex;
+			padding: 4px 8px;
+			border-radius: 4px;
+			color: var(--color-text-white);
+			font-size: var(--font-small);
+			background: rgba(5, 5, 5, 0.0);
+			transition: all .5s ease;
+		}
+
+
+		.menu-list a:hover li{
+			color: var(--color-text-black);
+			background: var(--color-white);
+		}
+
+
+		.menu-list .active{
+			color: var(--color-text-black);
+			background: var(--color-white);
+		}
+
+
+		.menu-icon a{
+			filter: invert(1);
+			transition: all .3s ease;
+		}
+
+
+		.menu-icon a div{
+			background: var(--color-white);
+		}
+
+
+		.menu-icon a:hover{
+			opacity: .5;
+		}
+
+		/*Header*/
+
+
+
+
+
+
+
+
+		/*Hero*/
+
+		#hero-wrap{
+			display: flex;
+			justify-content: center;
+			flex-flow: column;
+			position: relative;
+			width: 100%;
+			height: 90vh;
+        	padding-top: 107px;
+			color: var(--color-text-white);
+			background: var(--color-main);
+		}
+
+
+		.hero-title-wrap{
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+		}
+
+
+		.hero-title{
+			display: flex;
+			align-items: center;
+			text-align: center;
+		}
+
+
+		h1{
+			font-weight: 600;
+			font-size: 9vw;
+			transition: all .1s ease;
+		}
+
+
+		h1:nth-child(8){
+			margin-left: 2vw;
+		}
+
+
+		h1:hover{
+			color: var(--color-text-yellow);
+		}
+
+
+		#hero-wrap h2{
+			margin-top: 4px;
+			font-weight: 500;
+			font-size: 3vw;
+		}
+
+
+		.scroll-wrap{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			right: 80px;
+			bottom: 0;
+			margin-bottom: 60px;
+		}
+
+
+		.scroll-wrap p{
+			margin-right: 16px;
+			font-weight: 100;
+			font-size: var(--font-micro);
+		}
+
+
+		.scroll-wrap .mouse{
+			position: relative;
+			width: 44px;
+			height: 72px;
+			border: 2px solid var(--color-white);
+		    border-radius: 28px;
+		}
+
+
+		.scroll-wrap .mouse .scroll-btn{
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			margin-top: 12px;
+			margin-left: 18px;
+			border-radius: 50%;
+			background: var(--color-white);
+			animation-name: Scrolling;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+		}
+
+
+		@keyframes Scrolling{
+			0%{
+				margin-top: 12px;
+			}
+
+			95%{
+				opacity: 10%;
+			}
+
+			100%{
+				margin-top: 36px;
+				opacity: 0;
+			}
+		}
+
+		/*Hero*/
+
+
+
+
+
+
+
+
+		/*Introduction*/
+
+		#introduction{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+			text-align: center;
+		}
+
+
+		#introduction h3{
+			color: var(--color-text-black);
+			font-weight: 600;
+			font-size: var(--font-medium);
+		}
+
+		#introduction p{
+			width: 600px;
+			margin-top: 24px;
+			font-weight: 400;
+			font-size: var(--font-small);
+		}
+
+
+		#introduction a{
+			margin-top: 60px;
+			padding: 12px 24px;
+			color: var(--color-text-white);
+			font-weight: 500;
+			font-size: var(--font-micro);
+			background: var(--color-main);
+		}
+
+
+		#introduction a:hover{
+			padding: 10px 22px;
+			border: 2px solid var(--color-main);
+			color: var(--color-text-black);
+			font-weight: 600;
+			background-color: var(--color-accect);
+		}
+
+		/*Introduction*/
+
+
+
+
+
+
+
+
+		/*Category*/
+
+		#category{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column;
+			width: 100%;
+			height: 100vh;
+			background: var(--color-main);
+		}
+
+
+		#category h4{
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 48px;
+			padding-left: 80px;
+			color: var(--color-text-white);
+			font-weight: 500;
+			font-size: var(--font-small);
+			box-sizing: border-box;
+		}
+
+
+		.category-container{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			width: 100%;
+			padding: 0 80px;
+			box-sizing: border-box;
+		}
+
+		
+		.category-lists li{
+			width: 100%;
+			padding: 20px 40px;
+			border-bottom: 1px solid var(--color-white);
+			color: var(--color-text-white);
+			font-weight: 400;
+			font-size: var(--font-large);
+			text-align: right;
+			letter-spacing: -0.5 px;
+			background: linear-gradient(90deg, rgba(244,165,46,0) 10%, rgba(244,165,46,0) 65%, rgba(244,165,46,0) 100%);
+			box-sizing: border-box;
+			opacity: .5;
+			transition: .3s ease;
+		}
+
+
+		.category-lists li:hover{
+			border-bottom: 1px solid rgba(255,255,255,.5);
+			color: var(--color-text-white);
+			background: linear-gradient(90deg, rgba(244,165,46,0) 10%, rgba(244,165,46,.12) 70%, rgba(244,165,46,0) 100%);
+			opacity: 1;
+		}
+
+
+		.category-lists a:last-child li{
+			border-bottom: none;
+		}
+
+
+		.category-img-section{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			background-image: url(https://i.postimg.cc/fWGZPwbj/categories-img.gif);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		/*Category*/
+
+
+
+
+
+
+
+
+
+		/*Footer*/
+
+		#footer{
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			width: 100%;
+			padding: 160px 80px 160px;
+			background: var(--color-grey);
+			box-sizing: border-box;
+		}
+
+
+		.item .footer-logo{
+			height: 40px;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none
+		}
+
+
+		.footer-container{
+			display: flex;
+         	gap: 20vw;
+		}
+
+
+		#footer .site-info a{
+			color: var(--color-text-white);
+		}
+
+
+		#footer .site-info{
+			display: flex;
+			flex-flow: column;
+			font-weight: 500;
+			font-size: var(--font-micro);
+		}
+
+
+		#footer .site-info li{
+			margin-bottom: 16px;
+			opacity: .5;
+		}
+
+
+		#footer .site-info li:hover{
+			text-decoration: underline;
+			opacity: 1;
+		}
+
+
+		#footer .info-container{
+			display: flex;
+			flex-flow: column;
+			gap: 36px;
+			opacity: .5;
+		}
+
+
+		.info-container .info{
+			display: flex;
+			flex-flow: column;
+			gap: 4px;
+			color: var(--color-text-white);
+		}
+
+		.info-container .info h6{
+			font-weight: 500;
+			font-size: 1rem;
+		}
+
+		.info-container .info p{
+			font-weight: 500;
+			font-size: var(--font-micro);
+		}
+
+
+		.top-btn{
+			position: absolute;
+			top: -20px;
+			right: 80px;
+			box-sizing: border-box;
+			transition: .5s ease;
+		}
+
+
+		.top-btn:hover{
+			transform: translateY(-20px);
+			filter: brightness(.6);
+		}
+
+
+		/*Footer*/
+
+
+
+
+	</style>
+
+</head>
+
+
+<body>
+
+
+
+
+	<!-- Header -->
+
+	<div id="header">
+		
+		<a href="Index.html"><img src="https://i.postimg.cc/zBH7kw4w/logo.png" alt="logo" height="30px"></a>
+
+		<ul class="menu-list">
+
+			<a href="Index.html"><li class="active">Home</li></a>
+			<a href="About.html"><li>About</li></a>
+			<a href="Exhibition.html"><li>Exhibition</li></a>
+			<a href="Contact.html"><li>Contact</li></a>
+
+		</ul>
+
+		<div class="menu-icon">
+
+			<a href="Menu_home.html">
+				<img src="https://i.postimg.cc/25F47NKS/menu-FILL0-wght400-GRAD0-opsz48-1.png" width="48px">
+			</a>
+
+		</div>
+
+	</div>
+
+	<!-- Header -->
+
+
+
+
+
+
+
+
+	<!-- Hero -->
+
+	<div id="hero-wrap">
+
+		<div class="hero-title-wrap">
+
+			<div class="hero-title">
+
+				<h1>J</h1>
+				<h1>O</h1>
+				<h1>L</h1>
+				<h1>J</h1>	
+				<h1>O</h1>
+				<h1>O</h1>
+				<h1>N</h1>
+				<h1>w</h1>
+				<h1>e</h1>
+
+			</div>
+
+			<div class="hero-subtitle">
+
+				<h2>2022 Graduate Showcase</h2>
+
+			</div>
+
+		</div>
+
+
+			<div class="scroll-wrap">
+
+				<p>Scroll Down</p>
+				<div class="mouse"><div class="scroll-btn"></div></div>
+
+			</div>
+
+	</div>
+
+	<!-- Hero -->
+
+
+
+
+
+
+
+
+	<!-- Introduction -->
+
+	<div id="introduction">
+
+		<h3>JOLJOON we Graduate Showcase</h3>
+
+		<p>전국 대학의 졸업 전시를 모아놓은 사이트입니다. 사회에 진출하기 전,<br>그동안의 배움의 과정이 담긴 대학생들의 노력이 담긴 작품전을 볼 수 있습니다. 시각 디자인, 순수 미술, 조형 예술, 미디어 아트 등 다양한 분야의 전시가 준비되어 있습니다. 전시에 관한 정보를 얻고 관람을 즐겨보세요.</p>
+
+		<a href="About.html">More introductions</a>
+
+	</div>
+
+	<!-- Introduction -->
+
+
+
+
+
+
+
+	<!-- Category -->
+
+	<div id="category">
+
+		<h4>CATEGORIES</h4>
+
+		<div class="category-container">
+
+			<ul class="category-lists">
+
+				<a href="Exhibition_Fashiondesign.html"><li>Fashion Design</li></a>
+				<a href="Exhibition_Industrialdesign.html"><li>Industrial Design</li></a>
+				<a href="Exhibition_Mediaart.html"><li>Media Art</li></a>
+				<a href="Exhibition_Painting.html"><li>Painting</li></a>
+				<a href="Exhibition_Plasticart.html"><li>Plastic Art</li></a>
+				<a href="Exhibition_Spaceart.html"><li>Space Art</li></a>
+				<a href="Exhibition_Visualdesign.html"><li>Visual Design</li></a>
+
+			</ul>
+
+			<div class="category-img-section"></div>
+
+		</div>
+
+	</div>
+
+	<!-- Category -->
+
+
+
+
+
+
+
+
+
+	<!-- Footer -->
+
+	<div id="footer">
+
+		<div class="footer-logo">
+			<a href="Index.html"><img src="https://i.postimg.cc/3xgvjDzP/Logo-large.png" alt="logo-footer" height="40px"></a>
+		</div>
+
+
+		<div class="footer-container">
+		
+			<div class="site-info">
+					
+				<ul>
+						
+					<a href="Index.html"><li>Home</li></a>
+					<a href="About.html"><li>About</li></a>
+					<a href="Exhibition.html"><li>Exhibition</li></a>
+					<a href="Contact.html"><li>Contact</li></a>
+
+				</ul>
+
+			</div>
+
+
+			<div class="info-container">
+
+				<div class="info">
+
+					<h6>Email</h6>
+					<p>joljoon_we@kakao.com</p>
+
+				</div>
+
+				<div class="info">
+
+					<h6>Instagram</h6>
+					<p>@joljoon_we</p>
+							
+				</div>
+
+			</div>
+
+		</div>
+
+		<a class="top-btn" href="#hero-wrap">
+			<img src="https://i.postimg.cc/XJYf74k4/Top.png" width="80px">
+		</a>
+
+	</div>
+
+   <!-- Footer -->
+
+
+
+
+
+
+
+   <script type="text/javascript">
+      (function(w, d, a){
+      w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+      };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+      })(window, document, "//rum.beusable.net/load/b221212e122456u865");
+   </script>
+
+
+</body>
+
+
+</html>
